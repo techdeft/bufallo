@@ -1,0 +1,629 @@
+[
+  {
+    "name": "Courtesy Air",
+    "category": "Airlines",
+    "description": [],
+    "owner": "Marty & Jackie Fowler",
+    "phone": "306-235-4373",
+    "fax": "306-235-4622",
+    "website": "www.courtesyair.ca"
+  },
+  {
+    "name": "24 hrs a day 7 days a week",
+    "category": "Airlines",
+    "description": [
+      "Terminal is open from 7 am to 6 pm",
+      "Buffalo Narrows Airways (Voyage Air)"
+    ],
+    "owner": "Barry O’Brien",
+    "phone": "306-235-4664",
+    "fax": "306-235-4620"
+  },
+  {
+    "name": "7 days a week from May 1st to October 31st",
+    "category": "Airlines",
+    "description": [
+      "Courtesy Inn"
+    ],
+    "phone": "306-235-4425",
+    "fax": "306-235-4855"
+  },
+  {
+    "name": "Monday to Friday – 7 am to 8 pm",
+    "category": "Accommodations",
+    "description": [
+      "Weekends – 8 am to 8 pm",
+      "Waterfront Inn",
+      "Tavern: 306-235-4833"
+    ],
+    "owner": "Gerald and Tracy Tinker",
+    "phone": "306-235-4830",
+    "fax": "306-235-4834",
+    "website": "www.waterfrontinn.ca"
+  },
+  {
+    "name": "Tinker’s Camp",
+    "category": "Accommodations",
+    "description": [],
+    "owner": "Gerald and Tracy Tinker",
+    "phone": "306-235-7643",
+    "website": "www.tinkerscamp.com"
+  },
+  {
+    "name": "(Fishing Lodge)",
+    "category": "Accommodations",
+    "description": [
+      "Hay Island Lodge"
+    ],
+    "owner": "Gerald and Tracy Tinker",
+    "phone": "306-235-7643"
+  },
+  {
+    "name": "Churchill Lake Guest House",
+    "category": "Accommodations",
+    "description": [],
+    "owner": "Marie and Ray Laprise",
+    "phone": "306-235-4802",
+    "cell": "306-235-7902",
+    "fax": "306-235-4883"
+  },
+  {
+    "name": "7 days a week/24 hours",
+    "category": "Accommodations",
+    "description": [
+      "Bayside Guest House"
+    ],
+    "owner": "Donald Morin",
+    "phone": "306-235-4234",
+    "cell": "306-235-7057",
+    "fax": "306-235-4685"
+  },
+  {
+    "name": "RV Park",
+    "category": "Accommodations",
+    "description": [],
+    "owner": "Craig and Eva Seright",
+    "phone": "306-235-4257",
+    "cell": "306-235-7190 or 306-235-7390"
+  },
+  {
+    "name": "Pioneer Point Resort",
+    "category": "Accommodations",
+    "description": [],
+    "phone": "306-235-4593",
+    "fax": "306-235-4594"
+  },
+  {
+    "name": "Ron Pedersen Rentals",
+    "category": "Accommodations",
+    "description": [],
+    "phone": "306-235-4447",
+    "cell": "306-235-7795"
+  },
+  {
+    "name": "Isadore Desjarlais Rentals",
+    "category": "Accommodations",
+    "description": [],
+    "phone": "306-235-4463"
+  },
+  {
+    "name": "CIBN Radio",
+    "category": "Advertisement",
+    "description": [
+      "Request Lines: 306-235-4215"
+    ],
+    "phone": "306-235-4722",
+    "fax": "306-235-4469"
+  },
+  {
+    "name": "306-235-4216",
+    "category": "Advertisement",
+    "description": [
+      "306-235-4217"
+    ],
+    "website": "www.cibnradio.com"
+  },
+  {
+    "name": "You-Nique Photography",
+    "category": "Advertisement",
+    "description": [],
+    "owner": "Holly Morgan",
+    "phone": "306-235-7444"
+  },
+  {
+    "name": "Buffalo Narrows Service Centre Inc.",
+    "category": "Automotive & Gas Bar",
+    "description": [],
+    "owner": "Peter & Nicole Laprise",
+    "phone": "306-235-4822",
+    "fax": "306-235-4299"
+  },
+  {
+    "name": "Monday to Friday – 8 am to 6 pm",
+    "category": "Automotive & Gas Bar",
+    "description": [
+      "Saturday – 10 am to 4 pm",
+      "J. Waite Fisheries Inc.",
+      "Northstar Construction & Maintenance"
+    ],
+    "owner": "John & Deanna Waite",
+    "phone": "306-235-4292",
+    "fax": "306-235-4282",
+    "cell": "306-235-7550"
+  },
+  {
+    "name": "Monday to Saturday – 9 am to 10 pm",
+    "category": "Automotive & Gas Bar",
+    "description": [
+      "Sunday – 11 am to 10 pm"
+    ]
+  },
+  {
+    "name": "Tinker’s Park",
+    "category": "Attractions",
+    "description": [
+      "Taylor’s Lake Campground",
+      "Sand Dunes Beach",
+      "St. Leo the Great Catholic Church",
+      "Buffalo Narrows Community Fellowship Church",
+      "A member of the Evangelical Free Church of Canada"
+    ],
+    "phone": "306-235-4464",
+    "email": "sflippin@sasktel.net",
+    "website": "www.buffalonarrowsfellowship.ca"
+  },
+  {
+    "name": "Beaver River Community Futures",
+    "category": "Development & Management Agencies",
+    "description": [
+      "Monday to Friday – 8:30 am to 5 pm"
+    ],
+    "phone": "306-235-4745",
+    "fax": "306-235-4787",
+    "email": "brcfdc.bn@sk.symp"
+  },
+  {
+    "name": "Buffalo Narrows Economic Development Corporation",
+    "category": "Development & Management Agencies",
+    "description": [],
+    "phone": "306-235-4593",
+    "fax": "306-235-4594",
+    "website": "www.buffalonarrows.com"
+  },
+  {
+    "name": "Buffalo Narrows Daycare Centre",
+    "category": "Education & Daycare",
+    "description": [
+      "Monday to Friday – 8 am to 5:30 pm"
+    ],
+    "phone": "306-235-4226",
+    "fax": "306-235-4671"
+  },
+  {
+    "name": "Buffalo Narrows Aboriginal Head start Preschool",
+    "category": "Education & Daycare",
+    "description": [
+      "Monday to Friday – 8:30 am to 5 pm"
+    ],
+    "phone": "306-235-2226",
+    "fax": "306-235-4450",
+    "email": "bnts11@sasktel.net"
+  },
+  {
+    "name": "Northlands College",
+    "category": "Education & Daycare",
+    "description": [],
+    "phone": "306-235-1765 Toll Free: 1-888-311-1185",
+    "fax": "306-235-4346",
+    "website": "www.northlandscollege.sk.ca"
+  },
+  {
+    "name": "Twin Lakes Community School",
+    "category": "Education & Daycare",
+    "description": [],
+    "phone": "306-235-4240",
+    "fax": "306-235-4452",
+    "website": "www.nlsd113.com"
+  },
+  {
+    "name": "Community School & Recreation Coordinator",
+    "category": "Education & Daycare",
+    "description": [],
+    "phone": "306-235-4240",
+    "fax": "306-235-4452"
+  },
+  {
+    "name": "NW Fabricators",
+    "category": "Fabrication & Manufacturing",
+    "description": [],
+    "phone": "306-235-4635",
+    "fax": "306-235-4636"
+  },
+  {
+    "name": "Beach House",
+    "category": "Fast Foods & Restaurants",
+    "description": [],
+    "phone": "306-235-4425",
+    "fax": "306-235-4622"
+  },
+  {
+    "name": "Hudson’s Snack Shack",
+    "category": "Grocery",
+    "description": [],
+    "phone": "306-235-4466",
+    "fax": "306-235-4467"
+  },
+  {
+    "name": "Monday to Thursday – 9 am to 10 pm",
+    "category": "Grocery",
+    "description": [
+      "Friday & Saturday – 9 am to 11 midnight",
+      "Sunday – 12 pm to 10 pm",
+      "Northwest Company - Northern Stores"
+    ],
+    "phone": "306-235-4396",
+    "fax": "306-235-4775",
+    "email": "store142@northwest.ca"
+  },
+  {
+    "name": "Monday to Saturday – 10 am to 9 pm",
+    "category": "Grocery",
+    "description": [
+      "Sunday - 12 pm to 6 pm"
+    ]
+  },
+  {
+    "name": "Canada Post",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-4202",
+    "tollFree": "1-800-267-1177"
+  },
+  {
+    "name": "Department of Highways",
+    "category": "Government Services",
+    "description": [
+      "Highway hotline: 1-888-335-7623"
+    ],
+    "phone": "306-235-1730",
+    "fax": "306-235-1792",
+    "website": "www.highways.gov.sk.ca"
+  },
+  {
+    "name": "Kids First North",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-5437",
+    "fax": "306-235-5435",
+    "tollFree": "1-877-670-5437",
+    "email": "admin.super@sasktel.net"
+  },
+  {
+    "name": "Keewatin Yathé Regional Health Authority",
+    "category": "Government Services",
+    "description": [
+      "Services:",
+      "Ambulance: 911",
+      "BN Health Centre: 306-235-5800",
+      "Emergency: 911"
+    ],
+    "phone": "306-235-2220",
+    "fax": "306-235-4500",
+    "email": "Cecile.shatilla@kyrha.sk.ca",
+    "website": "www.kyrha.ca",
+    "tollFree": "1-866-848-8011"
+  },
+  {
+    "name": "Regional Administration Office 1-866-274--8506",
+    "category": "Government Services",
+    "description": [
+      "Addictions Services: 306-235-5846",
+      "Addictions Services Coordinator: 306-235-5846",
+      "Child & Youth Coordinator: 306-235-3003",
+      "Dental Clinic: 306-235-5818",
+      "Community Health Educator: 306-235-5812",
+      "Diabetic Educator: 306-235-5842",
+      "Home Care Services: 306-235-5849",
+      "Human Resources Department: 306-235-5810",
+      "Mental Health Services: 306-235-5809",
+      "Northern Medical Transportation: 306-235-5831",
+      "Nutritionist: 306-235-5820",
+      "Population Health Care Services: 306-235-5848",
+      "Public Health Inspector: 306-235-5811",
+      "Public Health Nurse: 306-235-5813",
+      "Youth Development Coordinator: 306-235-3000",
+      "Ministry of the Economy",
+      "First Nations, Métis and Northern Economic Development Corporation"
+    ],
+    "tollFree": "1-877-246-5111",
+    "phone": "306-235-1815",
+    "fax": "306-235-1816",
+    "cell": "306-235-7736",
+    "email": "gerald.roy@gov.sk.ca"
+  },
+  {
+    "name": "Northwest Agencies (SGI)",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-4684",
+    "fax": "306-235-4685"
+  },
+  {
+    "name": "Monday to Friday – 10 am to 5 pm",
+    "category": "Government Services",
+    "description": [
+      "Probation Services"
+    ],
+    "phone": "306-235-1761",
+    "fax": "306-235-1762",
+    "website": "www.cpsp.gov.sk.ca",
+    "email": "jocelyn.young@gov.sk.ca"
+  },
+  {
+    "name": "Royal Mounted Police",
+    "category": "Government Services",
+    "description": [
+      "Emergency: 911",
+      "Victim Services: 306-235-4910"
+    ],
+    "phone": "306-235-6660",
+    "fax": "306-235-4926",
+    "website": "www.rcmp-grc.gc.ca"
+  },
+  {
+    "name": "Saskatchewan Liquor & Gaming Authorities",
+    "category": "Government Services",
+    "description": [
+      "Liquor Store #606"
+    ],
+    "phone": "306-235-1780",
+    "fax": "306-235-1809"
+  },
+  {
+    "name": "Monday to Saturday – 10 am to 6 pm",
+    "category": "Government Services",
+    "description": [
+      "Sasktel",
+      "Service number: 1-800-727-5835",
+      "Repair Dial: 611"
+    ],
+    "phone": "310-7253"
+  },
+  {
+    "name": "Monday to Friday – 8 am to 5 pm",
+    "category": "Government Services",
+    "description": [
+      "SaskPower",
+      "Service Number: 1-888-757-6937"
+    ],
+    "phone": "310-2220"
+  },
+  {
+    "name": "Ministry of Environment",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-1740",
+    "fax": "306-235-4624",
+    "website": "ministryofenvironment.gov.sk.ca"
+  },
+  {
+    "name": "Monday to Friday – 8 am to 5 pm",
+    "category": "Government Services",
+    "description": [
+      "Special Services:",
+      "TIP (Turn in Poachers) 1-800-667-7561",
+      "Spill Control: 1-800-667-7525",
+      "Ministry of Environment"
+    ],
+    "phone": "306-235-1800",
+    "fax": "306-235-1777"
+  },
+  {
+    "name": "Buffalo Narrows Community Correctional Centre",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-1753",
+    "fax": "306-235-4656"
+  },
+  {
+    "name": "Saskatchewan Social Services",
+    "category": "Government Services",
+    "description": [],
+    "phone": "306-235-1700",
+    "fax": "306-235-1794",
+    "tollFree": "1-800-667-7685"
+  },
+  {
+    "name": "Monday to Friday – 8 am to 5 pm",
+    "category": "Government Services",
+    "description": [
+      "After hour emergency workers available",
+      "Buffalo Narrows Family Support",
+      "Contact: Ellen Loutitt"
+    ],
+    "phone": "306-235-4941",
+    "fax": "306-235-4280"
+  },
+  {
+    "name": "Children Exposed to Violence",
+    "category": "Government Services",
+    "description": [
+      "Contact: Stephanie Petit"
+    ],
+    "phone": "306-235-2267",
+    "fax": "306-235-2269"
+  },
+  {
+    "name": "B. Pedersen Logging",
+    "category": "Construction & Trucking",
+    "description": [],
+    "phone": "306-235-4737",
+    "cell": "306-235-0002"
+  },
+  {
+    "name": "Garry Laprise Enterprises",
+    "category": "Construction & Trucking",
+    "description": [],
+    "phone": "306-235-4690"
+  },
+  {
+    "name": "Ron Pedersen Enterprise LtD",
+    "category": "Construction & Trucking",
+    "description": [],
+    "phone": "306-235-4447",
+    "cell": "306-235-7795"
+  },
+  {
+    "name": "Whitekrow Construction",
+    "category": "Construction & Trucking",
+    "description": [],
+    "owner": "Doug Krowchenko",
+    "cell": "306-235-7370"
+  },
+  {
+    "name": "Buffalo Narrows Regional Housing Authority",
+    "category": "Municipal Services",
+    "description": [],
+    "phone": "306-235-4283",
+    "fax": "306-235-4263"
+  },
+  {
+    "name": "Monday to Friday – 9 am to 5 pm",
+    "category": "Municipal Services",
+    "description": [
+      "Buffalo Narrows Weather Station"
+    ],
+    "phone": "306-235-4372"
+  },
+  {
+    "name": "Buffalo Narrows Friendship Centre",
+    "category": "Municipal Services",
+    "description": [],
+    "phone": "306-235-4633"
+  },
+  {
+    "name": "Or 306-235-4365",
+    "category": "Municipal Services",
+    "description": [
+      "306-235-4366",
+      "306-235-4367",
+      "Teen & Young Parent: 306-235-4907"
+    ],
+    "fax": "306-235-4867"
+  },
+  {
+    "name": "Buffalo Narrows Water Treatment Plant",
+    "category": "Municipal Services",
+    "description": [],
+    "phone": "306-235-4533"
+  },
+  {
+    "name": "Or 306-235-4947",
+    "category": "Municipal Services",
+    "description": [
+      "Northern Village of Buffalo Narrows",
+      "Maintenance Shop: 306-235-4616"
+    ],
+    "phone": "306-235-4225",
+    "fax": "306-235-4699"
+  },
+  {
+    "name": "Fire Hall",
+    "category": "Municipal Services",
+    "description": [
+      "Fire Alarm: 306-235-4444"
+    ],
+    "phone": "306-235-4488"
+  },
+  {
+    "name": "Northwest Company – Northern Retail Store",
+    "category": "Retail Business",
+    "description": [],
+    "phone": "306-235-4204",
+    "fax": "306-235-4775"
+  },
+  {
+    "name": "Monday to Saturday – 12pm to 6 pm",
+    "category": "Retail Business",
+    "description": [
+      "Petit’s Lumber & Home Hardware"
+    ],
+    "phone": "306-235-4446",
+    "fax": "306-235-4710"
+  },
+  {
+    "name": "Monday to Friday – 9 am to 6 pm",
+    "category": "Retail Business",
+    "description": [
+      "Saturday – 10 am to 5 pm"
+    ]
+  },
+  {
+    "name": "Northern Pharmacy",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-235-4344"
+  },
+  {
+    "name": "Or 306-235-4421",
+    "category": "Other Services",
+    "description": [],
+    "fax": "306-235-4536"
+  },
+  {
+    "name": "Innovation Credit Union",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-235-4414",
+    "fax": "306-235-4485",
+    "website": "www.innovationcu.ca"
+  },
+  {
+    "name": "Federated Co-operatives Ltd.",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-235-4420"
+  },
+  {
+    "name": "Polar Oils Ltd.",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-288-2244",
+    "fax": "306-288-2303",
+    "cell": "306-235-7336"
+  },
+  {
+    "name": "Meadow Lake Tribal Council",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-235-4264",
+    "fax": "306-235-4962"
+  },
+  {
+    "name": "Young’s Bus Service",
+    "category": "Other Services",
+    "description": [],
+    "phone": "306-235-4504",
+    "cell": "306-235-7474",
+    "fax": "306-235-4564"
+  },
+  {
+    "name": "Superior Propane",
+    "category": "Other Services",
+    "description": [
+      "Candle Lake Shiners",
+      "Distributors of Bait fish & Fresh water fish",
+      "Government Approved Facility"
+    ],
+    "tollFree": "1-877-873-7467",
+    "phone": "306-235-4234",
+    "fax": "306-235-4685"
+  },
+  {
+    "name": "Highway 155 Nail Salon",
+    "category": "Beauty",
+    "description": [],
+    "owner": "Corrine Laprise",
+    "phone": "306-235-3122"
+  }
+]

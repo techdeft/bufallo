@@ -1,4 +1,44 @@
 
+<script setup>
+import directoryData from '../data/directory.json'
+
+// Group businesses by category
+const groupedDirectory = directoryData.reduce((acc, business) => {
+    if (!acc[business.category]) {
+        acc[business.category] = []
+    }
+    // Filter out some incorrectly parsed empty names
+    if (business.name && business.name.length > 2 && !business.name.startsWith('Monday') && !business.name.startsWith('Or 306') && !business.name.startsWith('7 days')) {
+        acc[business.category].push(business)
+    }
+    return acc
+}, {})
+
+// Define icons for categories
+const categoryIcons = {
+    'Airlines': 'ph-airplane',
+    'Accommodations': 'ph-bed',
+    'Advertisement': 'ph-megaphone',
+    'Automotive & Gas Bar': 'ph-gas-pump',
+    'Attractions': 'ph-tent',
+    'Development & Management Agencies': 'ph-briefcase',
+    'Education & Daycare': 'ph-student',
+    'Fabrication & Manufacturing': 'ph-factory',
+    'Fast Foods & Restaurants': 'ph-hamburger',
+    'Grocery': 'ph-shopping-cart',
+    'Government Services': 'ph-bank',
+    'Construction & Trucking': 'ph-truck',
+    'Municipal Services': 'ph-buildings',
+    'Retail Business': 'ph-storefront',
+    'Other Services': 'ph-wrench',
+    'Beauty': 'ph-scissors'
+}
+
+const getIcon = (category) => {
+    return categoryIcons[category] || 'ph-storefront'
+}
+</script>
+
 <template>
     <div>
         <!-- Page Header -->
@@ -13,94 +53,35 @@
     <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             
-            <!-- Tourism & Hospitality -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                        <i class="ph-fill ph-tent text-2xl"></i>
+            <div v-for="(businesses, category) in groupedDirectory" :key="category" class="reveal">
+                <div v-if="businesses.length > 0">
+                    <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <i :class="['ph-fill text-2xl', getIcon(category)]"></i>
+                        </div>
+                        <h2 class="font-heading text-3xl font-bold text-slate-900">{{ category }}</h2>
                     </div>
-                    <h2 class="font-heading text-3xl font-bold text-slate-900">Tourism & Hospitality</h2>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">The Buffalo Lake House</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-bed"></i> Accommodation</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Churchill Lake Guesthouse</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-bed"></i> Accommodation</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Janelle's Room Rentals</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-bed"></i> Accommodation</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">SCREAMING EAGLE OUTFITTERS</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-fish"></i> Outdoor / Fishing</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Pelican Tavern</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-beer-stein"></i> Dining / Hospitality</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div v-for="(business, index) in businesses" :key="index" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                            <h3 class="font-bold text-lg text-slate-900 mb-4">{{ business.name }}</h3>
+                            
+                            <div class="space-y-2 mt-auto text-sm text-slate-600">
+                                <p v-if="business.owner" class="flex items-start gap-2"><i class="ph-fill ph-user text-primary mt-0.5"></i> <span>{{ business.owner }}</span></p>
+                                <p v-if="business.phone" class="flex items-start gap-2"><i class="ph-fill ph-phone text-primary mt-0.5"></i> <span>{{ business.phone }}</span></p>
+                                <p v-if="business.cell" class="flex items-start gap-2"><i class="ph-fill ph-device-mobile text-primary mt-0.5"></i> <span>{{ business.cell }}</span></p>
+                                <p v-if="business.fax" class="flex items-start gap-2"><i class="ph-fill ph-printer text-primary mt-0.5"></i> <span>{{ business.fax }}</span></p>
+                                <p v-if="business.email" class="flex items-start gap-2"><i class="ph-fill ph-envelope text-primary mt-0.5"></i> <span>{{ business.email }}</span></p>
+                                <p v-if="business.website" class="flex items-start gap-2"><i class="ph-fill ph-globe text-primary mt-0.5"></i> <a :href="business.website.startsWith('http') ? business.website : 'http://' + business.website" target="_blank" class="hover:text-primary transition-colors hover:underline">{{ business.website }}</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Retail & Local Services -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                        <i class="ph-fill ph-storefront text-2xl"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl font-bold text-slate-900">Retail & Local Services</h2>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Petit's Lumber & Hardware</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-hammer"></i> Hardware / Supplies</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Subway</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-hamburger"></i> Food Service</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Chester’s Chicken</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-hamburger"></i> Food Service</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Buffalo Buds</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-plant"></i> Retail</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Construction & Trades -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
-                    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                        <i class="ph-fill ph-crane text-2xl"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl font-bold text-slate-900">Construction & Trades</h2>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">White Krow Construction</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-buildings"></i> Contracting</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Kusch Electric</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-lightning"></i> Electrical Services</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Clearwater River Contracting</h3>
-                        <p class="text-sm text-slate-500 flex items-center gap-2"><i class="ph-fill ph-hard-hat"></i> General Contracting</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mining & Resource Development -->
-            <div class="reveal">
+            <!-- Mining & Resource Development (Featured block) -->
+            <div class="reveal mt-20">
                 <div class="bg-primary text-white rounded-3xl p-8 md:p-12 shadow-lg relative overflow-hidden">
-                    <div class="absolute -right-20 -top-20 opacity-10">
+                    <div class="absolute -right-20 -top-20 opacity-10 pointer-events-none">
                         <i class="ph-fill ph-mountains text-[300px]"></i>
                     </div>
                     <div class="relative z-10 max-w-3xl">

@@ -26,7 +26,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900">Location</h4>
-                                    <p class="text-slate-600 mt-1">1800 Pedersen Ave<br>Buffalo Narrows, SK S0M 0J0</p>
+                                    <p class="text-slate-600 mt-1">1491  Pedersen Ave<br>Buffalo Narrows, SK S0M 0J0</p>
                                 </div>
                             </div>
                             

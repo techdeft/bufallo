@@ -51,6 +51,22 @@
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-2">
                     <div class="aspect-[4/5] bg-slate-200 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
+                        <img src="/images/Kelsey.jpeg" alt="Kelsey Gardiner" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute bottom-6 left-6 right-6 z-20">
+                            <h3 class="font-heading text-2xl font-bold text-white mb-1">Kelsey Gardiner</h3>
+                            <p class="text-secondary font-medium text-sm">CAO</p>
+                            <p class="text-slate-300 text-xs mt-0.5">Northern Village of Buffalo Narrows</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Overseeing the administrative operations and executing the strategic vision of the village council.</p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal">
+                    <div class="aspect-[4/5] bg-slate-200 relative overflow-hidden flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
                         <img src="/images/farinde.jpeg" alt="Oyewole Farinde" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute bottom-6 left-6 right-6 z-20">
                             <h3 class="font-heading text-2xl font-bold text-white mb-1">Oyewole Farinde</h3>
@@ -64,8 +80,8 @@
                     </div>
                 </div>
 
-                <!-- Member 4 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal">
+                <!-- Member 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-1">
                     <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
                         <i class="ph-fill ph-user text-9xl text-slate-300 z-0"></i>
@@ -79,8 +95,8 @@
                     </div>
                 </div>
 
-                <!-- Member 5 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-1">
+                <!-- Member 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-2">
                     <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
                         <i class="ph-fill ph-user text-9xl text-slate-300 z-0"></i>
@@ -94,8 +110,8 @@
                     </div>
                 </div>
 
-                <!-- Member 6 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-2">
+                <!-- Member 7 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal">
                     <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
                         <i class="ph-fill ph-user text-9xl text-slate-300 z-0"></i>
@@ -109,8 +125,8 @@
                     </div>
                 </div>
 
-                <!-- Member 7 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal lg:col-start-2">
+                <!-- Member 8 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-1">
                     <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
                         <i class="ph-fill ph-user text-9xl text-slate-300 z-0"></i>

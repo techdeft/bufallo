@@ -5,7 +5,7 @@
             <div class="grid md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
                     <router-link to="/" class="flex items-center gap-2 mb-6">
-                        <i class="ph ph-buildings text-3xl text-white"></i>
+                        <!-- <i class="ph ph-buildings text-3xl text-white"></i> -->
                         <span class="font-heading font-bold text-2xl text-white">BNEDC</span>
                     </router-link>
                     <p class="mb-6 max-w-md text-slate-400">
