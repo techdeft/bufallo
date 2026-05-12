@@ -30,7 +30,7 @@ const initReveal = () => {
 }
 
 onMounted(() => {
-    initReveal()
+    setTimeout(() => initReveal(), 150)
 })
 
 watch(() => route.path, async () => {

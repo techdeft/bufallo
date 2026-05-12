@@ -36,7 +36,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="ph ph-map-pin text-xl text-primary-light mt-0.5"></i>
-                            <span>1800 Pedersen Ave,<br>Buffalo Narrows, SK S0M 0J0</span>
+                            <span>1491 pederson Avenue,<br>Buffalo Narrows, SK S0M 0J0</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="ph ph-phone text-xl text-primary-light"></i>
