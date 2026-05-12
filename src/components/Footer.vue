@@ -25,7 +25,7 @@
                     <h4 class="text-white font-heading font-bold text-lg mb-6">Quick Links</h4>
                     <ul class="space-y-3">
                         <li><router-link to="/about" class="hover:text-white transition-colors">About Us</router-link></li>
-                        <li><router-link to="/council" class="hover:text-white transition-colors">Council Members</router-link></li>
+                        <li><router-link to="/council" class="hover:text-white transition-colors">Council /Board Members</router-link></li>
                         <li><router-link to="/directory" class="hover:text-white transition-colors">Business Directory</router-link></li>
                         <li><router-link to="/events" class="hover:text-white transition-colors">Community Events</router-link></li>
                     </ul>

@@ -104,6 +104,13 @@ onUnmounted(() => {
                 <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/60 to-transparent mix-blend-multiply"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
             </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 pointer-events-none" data-slide="4">
+                <img src="/images/banner.jpeg" alt="Highway 155 Bridge" class="w-full h-full object-cover opacity-60 scale-105 transform transition-transform duration-[10000ms] ease-out">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/60 to-transparent mix-blend-multiply"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+            </div>
         </div>
 
         <!-- Carousel Content Overlay -->
@@ -313,18 +320,19 @@ onUnmounted(() => {
                 <!-- Event 1 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 reveal">
                     <div class="h-48 bg-slate-200 relative">
-                        <img src="/images/Town_centre_in_Buffalo_Narrows,_Saskatchewan.jpeg" alt="Event Image" class="w-full h-full object-cover">
+                        <img src="/images/banner.jpeg" alt="Event Image" class="w-full h-full object-cover">
                         <div class="absolute top-4 left-4 bg-white px-3 py-2 rounded-lg shadow-md text-center">
-                            <div class="text-xs font-bold text-primary uppercase">Aug</div>
-                            <div class="text-xl font-bold text-slate-900 leading-none">15</div>
+                            <div class="text-xs font-bold text-primary uppercase">Oct</div>
+                            <div class="text-xl font-bold text-slate-900 leading-none">08</div>
                         </div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
                             <i class="ph-fill ph-clock"></i> 6:00 PM - 8:00 PM
                         </div>
-                        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Community Town Hall</h3>
-                        <p class="text-slate-600 mb-4 line-clamp-2">Join us for an open discussion regarding the upcoming infrastructure projects and community development plans for the next fiscal year.</p>
+                        <h3 class="font-heading text-xl font-bold text-slate-900 mb-3">Northwest Economic Development
+Summit 2026</h3>
+                        <p class="text-slate-600 mb-4 line-clamp-2">Connecting Communities: A high-impact forum for regional leaders, industry experts, and entrepreneurs to shape our economic future.</p>
                         <router-link to="/events" class="text-primary font-medium hover:underline">Learn More</router-link>
                     </div>
                 </div>

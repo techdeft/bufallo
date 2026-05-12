@@ -14,7 +14,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <router-link to="/" class="text-primary font-medium hover:text-primary-light transition-colors" active-class="text-primary-light">Home</router-link>
                     <router-link to="/about" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">About Us</router-link>
-                    <router-link to="/council" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Council</router-link>
+                    <router-link to="/council" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Council/Board Members</router-link>
                     <router-link to="/directory" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Directory</router-link>
                     <router-link to="/events" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Events</router-link>
                     <router-link to="/contact" class="px-5 py-2.5 rounded-full bg-primary text-white font-medium hover:bg-primary-dark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</router-link>
