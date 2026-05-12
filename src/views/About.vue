@@ -135,7 +135,7 @@
                         <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">Together, we are building a stronger community, a thriving economy, and a future filled with opportunity for every resident and business in our region.</p>
                         <div class="pt-6 border-t border-slate-100">
                             <p class="font-heading font-bold text-xl text-slate-900">Oyewole Farinde</p>
-                            <p class="text-primary text-sm font-medium">Economic/Business Development Officer (BDO) — BNEDC</p>
+                            <p class="text-primary text-sm font-medium">Economic/Business Development Manager  (BDM) — BNEDC</p>
                             <p class="text-slate-400 italic text-xs mt-2">"Building opportunities that inspire progress"</p>
                         </div>
                     </div>
