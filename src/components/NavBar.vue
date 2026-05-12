@@ -35,7 +35,7 @@
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <router-link to="/" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Home</router-link>
                 <router-link to="/about" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">About Us</router-link>
-                <router-link to="/council" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Council</router-link>
+                <router-link to="/council" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Council/Board Members</router-link>
                 <router-link to="/directory" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Directory</router-link>
                 <router-link to="/events" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Events</router-link>
                 <router-link to="/contact" @click="mobileMenuOpen = false" class="block mt-4 text-center px-5 py-3 rounded-full bg-primary text-white font-medium shadow-md">Contact Us</router-link>
