@@ -12,12 +12,12 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <router-link to="/" class="text-primary font-medium hover:text-primary-light transition-colors" active-class="text-primary-light">Home</router-link>
-                    <router-link to="/about" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">About Us</router-link>
-                    <router-link to="/council" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Council/Board Members</router-link>
-                    <router-link to="/directory" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Directory</router-link>
-                    <router-link to="/events" class="text-slate-600 font-medium hover:text-primary transition-colors" active-class="text-primary">Events</router-link>
-                    <router-link to="/contact" class="px-5 py-2.5 rounded-full bg-primary text-white font-medium hover:bg-primary-dark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact Us</router-link>
+                    <router-link to="/" class="text-slate-600 font-medium hover:text-primary transition-colors" exact-active-class="!text-primary">Home</router-link>
+                    <router-link to="/about" class="text-slate-600 font-medium hover:text-primary transition-colors" exact-active-class="!text-primary">About Us</router-link>
+                    <router-link to="/council" class="text-slate-600 font-medium hover:text-primary transition-colors" exact-active-class="!text-primary">Council/Board Members</router-link>
+                    <router-link to="/directory" class="text-slate-600 font-medium hover:text-primary transition-colors" exact-active-class="!text-primary">Directory</router-link>
+                    <router-link to="/events" class="text-slate-600 font-medium hover:text-primary transition-colors" exact-active-class="!text-primary">Events</router-link>
+                    <router-link to="/contact" class="px-5 py-2.5 rounded-full bg-primary text-white font-medium hover:bg-primary-dark transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5" exact-active-class="!bg-primary-dark">Contact Us</router-link>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -33,12 +33,12 @@
         <!-- Mobile Menu Panel -->
         <div v-show="mobileMenuOpen" class="md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <router-link to="/" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Home</router-link>
-                <router-link to="/about" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">About Us</router-link>
-                <router-link to="/council" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Council/Board Members</router-link>
-                <router-link to="/directory" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Directory</router-link>
-                <router-link to="/events" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" active-class="text-primary bg-slate-50">Events</router-link>
-                <router-link to="/contact" @click="mobileMenuOpen = false" class="block mt-4 text-center px-5 py-3 rounded-full bg-primary text-white font-medium shadow-md">Contact Us</router-link>
+                <router-link to="/" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" exact-active-class="!text-primary !bg-slate-50">Home</router-link>
+                <router-link to="/about" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" exact-active-class="!text-primary !bg-slate-50">About Us</router-link>
+                <router-link to="/council" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" exact-active-class="!text-primary !bg-slate-50">Council/Board Members</router-link>
+                <router-link to="/directory" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" exact-active-class="!text-primary !bg-slate-50">Directory</router-link>
+                <router-link to="/events" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-primary" exact-active-class="!text-primary !bg-slate-50">Events</router-link>
+                <router-link to="/contact" @click="mobileMenuOpen = false" class="block mt-4 text-center px-5 py-3 rounded-full bg-primary text-white font-medium shadow-md" exact-active-class="!bg-primary-dark">Contact Us</router-link>
             </div>
         </div>
     </nav>
