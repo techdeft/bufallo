@@ -121,6 +121,13 @@ onUnmounted(() => {
             </div>
         </div>
 
+        <!-- Maple leaf watermark overlay on hero -->
+        <div class="absolute bottom-12 right-8 z-5 pointer-events-none" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-48 h-48 md:w-72 md:h-72 text-white opacity-5" fill="currentColor">
+                <path d="M256 16l-40 96-104-24 56 80-96 32 80 40-16 96 72-48 8 112 40-80 40 80 8-112 72 48-16-96 80-40-96-32 56-80-104 24z"/>
+            </svg>
+        </div>
+
         <!-- Carousel Content Overlay -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white w-full pointer-events-none">
             <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-semibold tracking-wide uppercase mb-6 reveal pointer-events-auto">
@@ -130,7 +137,7 @@ onUnmounted(() => {
                 Buffalo Narrows <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">Economic Development</span>
             </h1>
             <p class="mt-4 text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-10 font-light reveal reveal-delay-2 text-balance">
-                Driving sustainable growth, empowering communities, and building a stronger Northern Saskatchewan.
+                Driving sustainable growth, empowering communities, and building a stronger future for Northern Canada.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4 reveal reveal-delay-3 pointer-events-auto">
                 <router-link to="/about" class="px-8 py-4 rounded-full bg-white text-primary font-semibold hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl">

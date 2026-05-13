@@ -1,13 +1,17 @@
 <template>
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 canada-stripe">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <router-link to="/">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <router-link to="/" class="flex items-center gap-2">
                         <img src="/images/logo.png" alt="BNEDC Logo" class="h-12 w-auto object-contain">
                     </router-link>
+                    <!-- Canadian maple leaf accent -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 text-canada flex-shrink-0 opacity-70" fill="#D42B2B" aria-label="Canadian maple leaf">
+                        <path d="M256 16l-40 96-104-24 56 80-96 32 80 40-16 96 72-48 8 112 40-80 40 80 8-112 72 48-16-96 80-40-96-32 56-80-104 24z"/>
+                    </svg>
                 </div>
 
                 <!-- Desktop Menu -->

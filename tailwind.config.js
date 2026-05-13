@@ -14,6 +14,11 @@ export default {
         },
         secondary: {
             DEFAULT: '#d97706',
+        },
+        canada: {
+            DEFAULT: '#D42B2B',
+            dark: '#a81e1e',
+            light: '#f87171',
         }
       },
       fontFamily: {
