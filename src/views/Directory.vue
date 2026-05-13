@@ -15,22 +15,22 @@ const businesses = rawData.filter(b => isValidName(b.name))
 
 // ── categories ────────────────────────────────────────────────────────────────
 const categoryConfig = {
-    'Airlines':                         { icon: 'ph-airplane',       color: 'bg-sky-100 text-sky-700' },
-    'Accommodations':                   { icon: 'ph-bed',             color: 'bg-teal-100 text-teal-700' },
-    'Advertisement':                    { icon: 'ph-megaphone',       color: 'bg-orange-100 text-orange-700' },
-    'Automotive & Gas Bar':             { icon: 'ph-gas-pump',        color: 'bg-yellow-100 text-yellow-700' },
-    'Attractions':                      { icon: 'ph-tent',            color: 'bg-green-100 text-green-700' },
-    'Development & Management Agencies':{ icon: 'ph-briefcase',       color: 'bg-purple-100 text-purple-700' },
-    'Education & Daycare':              { icon: 'ph-student',         color: 'bg-blue-100 text-blue-700' },
-    'Fabrication & Manufacturing':      { icon: 'ph-factory',         color: 'bg-gray-100 text-gray-700' },
-    'Fast Foods & Restaurants':         { icon: 'ph-hamburger',       color: 'bg-red-100 text-red-700' },
-    'Grocery':                          { icon: 'ph-shopping-cart',   color: 'bg-lime-100 text-lime-700' },
-    'Government Services':              { icon: 'ph-bank',            color: 'bg-indigo-100 text-indigo-700' },
-    'Construction & Trucking':          { icon: 'ph-truck',           color: 'bg-amber-100 text-amber-700' },
-    'Municipal Services':               { icon: 'ph-buildings',       color: 'bg-cyan-100 text-cyan-700' },
-    'Retail Business':                  { icon: 'ph-storefront',      color: 'bg-pink-100 text-pink-700' },
-    'Other Services':                   { icon: 'ph-wrench',          color: 'bg-slate-100 text-slate-700' },
-    'Beauty':                           { icon: 'ph-scissors',        color: 'bg-rose-100 text-rose-700' },
+    'Airlines':                         { icon: 'ph-airplane',       color: 'bg-sky-100 text-sky-700',       accent: 'bg-sky-400' },
+    'Accommodations':                   { icon: 'ph-bed',             color: 'bg-teal-100 text-teal-700',     accent: 'bg-teal-400' },
+    'Advertisement':                    { icon: 'ph-megaphone',       color: 'bg-orange-100 text-orange-700', accent: 'bg-orange-400' },
+    'Automotive & Gas Bar':             { icon: 'ph-gas-pump',        color: 'bg-yellow-100 text-yellow-700', accent: 'bg-yellow-400' },
+    'Attractions':                      { icon: 'ph-tent',            color: 'bg-green-100 text-green-700',   accent: 'bg-green-400' },
+    'Development & Management Agencies':{ icon: 'ph-briefcase',       color: 'bg-purple-100 text-purple-700', accent: 'bg-purple-400' },
+    'Education & Daycare':              { icon: 'ph-student',         color: 'bg-blue-100 text-blue-700',     accent: 'bg-blue-400' },
+    'Fabrication & Manufacturing':      { icon: 'ph-factory',         color: 'bg-gray-100 text-gray-700',     accent: 'bg-gray-400' },
+    'Fast Foods & Restaurants':         { icon: 'ph-hamburger',       color: 'bg-red-100 text-red-700',       accent: 'bg-red-400' },
+    'Grocery':                          { icon: 'ph-shopping-cart',   color: 'bg-lime-100 text-lime-700',     accent: 'bg-lime-400' },
+    'Government Services':              { icon: 'ph-bank',            color: 'bg-indigo-100 text-indigo-700', accent: 'bg-indigo-400' },
+    'Construction & Trucking':          { icon: 'ph-truck',           color: 'bg-amber-100 text-amber-700',   accent: 'bg-amber-400' },
+    'Municipal Services':               { icon: 'ph-buildings',       color: 'bg-cyan-100 text-cyan-700',     accent: 'bg-cyan-400' },
+    'Retail Business':                  { icon: 'ph-storefront',      color: 'bg-pink-100 text-pink-700',     accent: 'bg-pink-400' },
+    'Other Services':                   { icon: 'ph-wrench',          color: 'bg-slate-100 text-slate-700',   accent: 'bg-slate-400' },
+    'Beauty':                           { icon: 'ph-scissors',        color: 'bg-rose-100 text-rose-700',     accent: 'bg-rose-400' },
 }
 
 const allCategories = [...new Set(businesses.map(b => b.category))]
@@ -157,7 +157,7 @@ const getCfg = (cat) => categoryConfig[cat] || { icon: 'ph-storefront', color: '
                             class="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-primary/20 transition-all duration-300 flex flex-col overflow-hidden"
                         >
                             <!-- Card top accent -->
-                            <div :class="['h-1.5 w-full', getCfg(category).color.split(' ')[0].replace('bg-', 'bg-').replace('100', '400')]"></div>
+                            <div :class="['h-1.5 w-full', getCfg(category).accent]"></div>
 
                             <div class="p-6 flex flex-col flex-1">
                                 <!-- Category chip -->
