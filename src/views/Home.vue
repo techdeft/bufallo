@@ -441,7 +441,7 @@ Summit 2026</h3>
                                 <img src="/images/Buffalo_Narrows_Sand_Dunes.jpg" alt="Buffalo Narrows Sand Dunes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
                             <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-                                <img src="/images/Churchill_Lake_at_Buffalo_Narrows,_Saskatchewan.jpeg" alt="Churchill Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <img src="/images/Churchill_Lake_at_Buffalo_Narrows,_Saskatchewan_2.jpeg" alt="Churchill Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
                         </div>
                         <div class="space-y-4 pt-8">

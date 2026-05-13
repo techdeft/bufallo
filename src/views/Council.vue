@@ -68,7 +68,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group reveal reveal-delay-2">
                     <div class="aspect-[4/5] bg-slate-100 relative overflow-hidden flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-90 z-10"></div>
-                        <i class="ph-fill ph-user text-9xl text-slate-300 z-0"></i>
+                        <img src="/images/Christopher.jpeg" alt="Christopher Petit" class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute bottom-6 left-6 right-6 z-20">
                             <h3 class="font-heading text-2xl font-bold text-white mb-1">Christopher Petit</h3>
                             <p class="text-primary-light text-slate-200 font-medium text-sm">Council Member</p>
