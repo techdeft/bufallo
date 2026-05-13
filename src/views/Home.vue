@@ -1,13 +1,22 @@
 
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const showScrollTop = ref(false);
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
 onMounted(() => {
+    // Scroll-to-top visibility
+    const handleScroll = () => { showScrollTop.value = window.scrollY > 400; };
+    window.addEventListener('scroll', handleScroll);
+    window._homeScrollHandler = handleScroll;
+
+    // Carousel
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
     const prevBtn = document.getElementById('prev-slide');
     const nextBtn = document.getElementById('next-slide');
-    
+
     let slideInterval;
     if (slides.length > 0) {
         let currentSlide = 0;
@@ -19,9 +28,7 @@ onMounted(() => {
                 dots[currentSlide].classList.remove('bg-white');
                 dots[currentSlide].classList.add('bg-white/40');
             }
-
             currentSlide = (newIndex + slides.length) % slides.length;
-
             slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none');
             slides[currentSlide].classList.add('opacity-100');
             if (dots[currentSlide]) {
@@ -32,45 +39,46 @@ onMounted(() => {
 
         const nextSlide = () => updateCarousel(currentSlide + 1);
         const prevSlide = () => updateCarousel(currentSlide - 1);
+        const startAutoPlay = () => { stopAutoPlay(); slideInterval = setInterval(nextSlide, 6000); };
+        const stopAutoPlay = () => { if (slideInterval) clearInterval(slideInterval); };
 
-        const startAutoPlay = () => {
-            stopAutoPlay();
-            slideInterval = setInterval(nextSlide, 6000);
-        };
-
-        const stopAutoPlay = () => {
-            if (slideInterval) clearInterval(slideInterval);
-        };
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                startAutoPlay();
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                startAutoPlay();
-            });
-        }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                updateCarousel(index);
-                startAutoPlay();
-            });
-        });
+        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+        dots.forEach((dot, index) => dot.addEventListener('click', () => { updateCarousel(index); startAutoPlay(); }));
 
         startAutoPlay();
-        
         window._homeCarouselInterval = slideInterval;
+    }
+
+    // Count-up animation for stats
+    const countEls = document.querySelectorAll('[data-count-up]');
+    if (countEls.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
+                    const target = parseInt(entry.target.dataset.countUp, 10);
+                    const suffix = entry.target.dataset.suffix || '';
+                    const steps = 60;
+                    let step = 0;
+                    const timer = setInterval(() => {
+                        step++;
+                        const current = Math.min(Math.round((target / steps) * step), target);
+                        entry.target.textContent = current.toLocaleString('en-US') + suffix;
+                        if (step >= steps) clearInterval(timer);
+                    }, 2000 / steps);
+                }
+            });
+        }, { threshold: 0.5 });
+        countEls.forEach(el => observer.observe(el));
+        window._countUpObserver = observer;
     }
 });
 
 onUnmounted(() => {
     if (window._homeCarouselInterval) clearInterval(window._homeCarouselInterval);
+    if (window._homeScrollHandler) window.removeEventListener('scroll', window._homeScrollHandler);
+    if (window._countUpObserver) window._countUpObserver.disconnect();
 });
 </script>
 
@@ -116,7 +124,7 @@ onUnmounted(() => {
         <!-- Carousel Content Overlay -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white w-full pointer-events-none">
             <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-semibold tracking-wide uppercase mb-6 reveal pointer-events-auto">
-                Welcome to the Future
+                Northwest Saskatchewan's Gateway to Growth
             </span>
             <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight reveal reveal-delay-1 text-balance">
                 Buffalo Narrows <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">Economic Development</span>
@@ -148,6 +156,7 @@ onUnmounted(() => {
             <button class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all focus:outline-none" data-slide="1"></button>
             <button class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all focus:outline-none" data-slide="2"></button>
             <button class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all focus:outline-none" data-slide="3"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-white/40 hover:bg-white/60 transition-all focus:outline-none" data-slide="4"></button>
         </div>
     </header>
 
@@ -241,19 +250,19 @@ onUnmounted(() => {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/20">
                 <div class="reveal">
-                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2">1,100+</div>
+                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2" data-count-up="1100" data-suffix="+">1,100+</div>
                     <div class="text-white font-medium uppercase tracking-wider text-sm">Proud Residents</div>
                 </div>
                 <div class="reveal reveal-delay-1">
-                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2">50+</div>
+                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2" data-count-up="50" data-suffix="+">50+</div>
                     <div class="text-white font-medium uppercase tracking-wider text-sm">Local Businesses</div>
                 </div>
                 <div class="reveal reveal-delay-2">
-                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2">100%</div>
+                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2" data-count-up="100" data-suffix="%">100%</div>
                     <div class="text-white font-medium uppercase tracking-wider text-sm">Committed to Growth</div>
                 </div>
                 <div class="reveal reveal-delay-3">
-                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2">35+</div>
+                    <div class="text-4xl md:text-6xl font-bold text-white font-heading mb-2" data-count-up="35" data-suffix="+">35+</div>
                     <div class="text-white font-medium uppercase tracking-wider text-sm">Years of Service</div>
                 </div>
             </div>
@@ -413,43 +422,6 @@ Summit 2026</h3>
         </div>
     </section>
 
-    <!-- Messages Snippet Section -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl relative">
-                <!-- Background decoration -->
-                <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full"><path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"/></svg>
-                </div>
-
-                <div class="grid lg:grid-cols-2 relative z-10">
-                    <div class="p-10 md:p-16 flex flex-col justify-center text-white">
-                        <i class="ph-fill ph-quotes text-5xl text-white/20 mb-6"></i>
-                        <h3 class="font-heading text-3xl md:text-4xl font-bold mb-6">A vision for our future.</h3>
-                        <p class="text-lg text-white mb-8 font-light text-slate-200">
-                            "Our administration remains focused on building a stronger local economy, supporting infrastructure development, creating employment opportunities, and ensuring Buffalo Narrows has a strong voice in the future of Northern Saskatchewan development."
-                        </p>
-                        <div class="flex items-center gap-4 mb-8">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="ph-fill ph-user text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold font-heading">Shaylee Gardiner</h4>
-                                <p class="text-sm text-primary-light text-slate-300">Mayor & Chairperson</p>
-                            </div>
-                        </div>
-                        <router-link to="/about" class="inline-flex items-center gap-2 font-semibold hover:text-slate-200 transition-colors w-max">
-                            Read Full Messages <i class="ph-bold ph-arrow-right"></i>
-                        </router-link>
-                    </div>
-                    <div class="hidden lg:block bg-slate-900 relative">
-                        <img src="/images/Town_centre_in_Buffalo_Narrows,_Saskatchewan.jpeg" alt="Buffalo Narrows Town Centre" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity">
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Business Spotlight -->
     <section class="py-24 bg-white border-t border-slate-100">
@@ -458,19 +430,19 @@ Summit 2026</h3>
                 <div class="order-2 lg:order-1 relative reveal">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-4">
-                            <div class="aspect-square bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 p-6 flex items-center justify-center hover:shadow-md hover:border-primary/20 transition-all group">
-                                <i class="ph ph-storefront text-5xl text-primary/50 group-hover:text-primary group-hover:scale-110 transition-all"></i>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                                <img src="/images/Buffalo_Narrows_Sand_Dunes.jpg" alt="Buffalo Narrows Sand Dunes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
-                            <div class="aspect-[4/3] bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 p-6 flex items-center justify-center hover:shadow-md hover:border-primary/20 transition-all group">
-                                <i class="ph ph-wrench text-5xl text-primary/50 group-hover:text-primary group-hover:scale-110 transition-all"></i>
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                                <img src="/images/Churchill_Lake_at_Buffalo_Narrows,_Saskatchewan.jpeg" alt="Churchill Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
                         </div>
                         <div class="space-y-4 pt-8">
-                            <div class="aspect-[4/3] bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 p-6 flex items-center justify-center hover:shadow-md hover:border-primary/20 transition-all group">
-                                <i class="ph ph-airplane-tilt text-5xl text-primary/50 group-hover:text-primary group-hover:scale-110 transition-all"></i>
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                                <img src="/images/Town_centre_in_Buffalo_Narrows,_Saskatchewan.jpeg" alt="Town Centre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
-                            <div class="aspect-square bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 p-6 flex items-center justify-center hover:shadow-md hover:border-primary/20 transition-all group">
-                                <i class="ph ph-shopping-cart text-5xl text-primary/50 group-hover:text-primary group-hover:scale-110 transition-all"></i>
+                            <div class="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                                <img src="/images/Highway_155_bridge_at_Buffalo_Narrows (1).JPG" alt="Highway 155 Bridge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             </div>
                         </div>
                     </div>
@@ -499,5 +471,29 @@ Summit 2026</h3>
             </div>
         </div>
     </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-primary-dark to-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <svg viewBox="0 0 200 200" class="w-full h-full"><circle cx="150" cy="50" r="100" fill="white"/><circle cx="50" cy="150" r="80" fill="white"/></svg>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <span class="inline-block py-1 px-4 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-bold tracking-widest uppercase mb-6">Get Involved</span>
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Ready to Invest, Relocate,<br class="hidden md:block"> or Partner With Us?</h2>
+            <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">Whether you're a business owner, investor, or community partner — BNEDC is here to help you grow in Northern Saskatchewan.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <router-link to="/contact" class="px-8 py-4 rounded-full bg-white text-primary font-bold hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Talk to Us Today</router-link>
+                <router-link to="/directory" class="px-8 py-4 rounded-full bg-white/10 border border-white/30 text-white font-semibold hover:bg-white/20 backdrop-blur-sm transition-all">Browse Directory</router-link>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button
+        @click="scrollToTop"
+        :class="['fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-primary text-white shadow-lg hover:bg-primary-dark hover:shadow-xl transition-all duration-300 transform flex items-center justify-center', showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none']"
+        aria-label="Scroll to top">
+        <i class="ph-bold ph-arrow-up text-xl"></i>
+    </button>
     </div>
 </template>
