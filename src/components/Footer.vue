@@ -49,15 +49,15 @@
                     <h4 class="text-white font-heading font-bold text-lg mb-6">Contact</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <i class="ph ph-map-pin text-xl text-primary-light mt-0.5"></i>
+                            <i class="ph ph-map-pin text-xl text-white mt-0.5"></i>
                             <span>1491 Pederson Avenue,<br>Buffalo Narrows, SK S0M 0J0<br><span class="text-canada-light text-xs font-semibold">Saskatchewan, Canada</span></span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="ph ph-phone text-xl text-primary-light"></i>
+                            <i class="ph ph-phone text-xl text-white"></i>
                             <span>(306) 235-4593</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <i class="ph ph-envelope text-xl text-primary-light"></i>
+                            <i class="ph ph-envelope text-xl text-white"></i>
                             <span><router-link to="/contact" class="hover:text-white">Contact Form</router-link></span>
                         </li>
                     </ul>

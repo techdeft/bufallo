@@ -240,7 +240,7 @@
                 <!-- Committee Member 2 -->
                 <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 reveal reveal-delay-1 group">
                     <div class="aspect-square bg-slate-800 relative overflow-hidden flex items-center justify-center">
-                        <i class="ph-fill ph-user-tie text-7xl text-slate-600"></i>
+                        <img src="/images/farinde.jpeg" alt="Oyewole Farinde" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5 border-t border-slate-800/80">
                         <h4 class="font-heading font-bold text-lg text-white mb-0.5">Oyewole Farinde</h4>
@@ -295,7 +295,7 @@
                 <!-- Committee Member 7 -->
                 <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 reveal reveal-delay-2 group">
                     <div class="aspect-square bg-slate-800 relative overflow-hidden flex items-center justify-center">
-                        <i class="ph-fill ph-user text-7xl text-slate-600"></i>
+                        <img src="/images/Christopher.jpeg" alt="Christopher Petit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5 border-t border-slate-800/80">
                         <h4 class="font-heading font-bold text-lg text-white mb-0.5">Christopher Petit</h4>
