@@ -5,13 +5,16 @@
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <router-link to="/" class="flex items-center gap-2">
-                        <img src="/images/logo.png" alt="BNEDC Logo" class="h-12 w-auto object-contain">
+                    <router-link to="/" class="flex flex-col justify-center">
+                        <div class="flex items-center gap-2">
+                            <img src="/images/logo.png" alt="BNEDC Logo" class="h-12 w-auto object-contain">
+                            <!-- Canadian maple leaf accent -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 text-canada flex-shrink-0 opacity-70" fill="#D42B2B" aria-label="Canadian maple leaf">
+                                <path d="M256 16l-40 96-104-24 56 80-96 32 80 40-16 96 72-48 8 112 40-80 40 80 8-112 72 48-16-96 80-40-96-32 56-80-104 24z"/>
+                            </svg>
+                        </div>
+                        <span class="text-[10px] sm:text-[11px] tracking-widest font-bold uppercase text-slate-600 mt-1 ml-1 hidden sm:block">Economic Development Corporation</span>
                     </router-link>
-                    <!-- Canadian maple leaf accent -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 text-canada flex-shrink-0 opacity-70" fill="#D42B2B" aria-label="Canadian maple leaf">
-                        <path d="M256 16l-40 96-104-24 56 80-96 32 80 40-16 96 72-48 8 112 40-80 40 80 8-112 72 48-16-96 80-40-96-32 56-80-104 24z"/>
-                    </svg>
                 </div>
 
                 <!-- Desktop Menu -->

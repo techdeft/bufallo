@@ -498,7 +498,7 @@ Summit 2026</h3>
     <!-- Scroll to Top Button -->
     <button
         @click="scrollToTop"
-        :class="['fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-primary text-white shadow-lg hover:bg-primary-dark hover:shadow-xl transition-all duration-300 transform flex items-center justify-center', showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none']"
+        :class="['fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-primary text-white shadow-lg hover:bg-primary-dark hover:shadow-xl transition-all duration-300 transform flex items-center justify-center', showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none']"
         aria-label="Scroll to top">
         <i class="ph-bold ph-arrow-up text-xl"></i>
     </button>

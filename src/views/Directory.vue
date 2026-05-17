@@ -136,7 +136,7 @@ const getCfg = (cat) => categoryConfig[cat] || { icon: 'ph-storefront', color: '
                 </div>
 
                 <!-- Grouped results -->
-                <div v-for="(list, category) in grouped" :key="category" class="mb-16 reveal">
+                <div v-for="(list, category) in grouped" :key="category" class="mb-16">
 
                     <!-- Category header -->
                     <div class="flex items-center gap-4 mb-6">
@@ -154,7 +154,7 @@ const getCfg = (cat) => categoryConfig[cat] || { icon: 'ph-storefront', color: '
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <div
                             v-for="(biz, i) in list" :key="i"
-                            class="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-primary/20 transition-all duration-300 flex flex-col overflow-hidden"
+                            class="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:ring-1 hover:ring-primary/20 transition-all duration-300 flex flex-col overflow-hidden"
                         >
                             <!-- Card top accent -->
                             <div :class="['h-1.5 w-full', getCfg(category).accent]"></div>
