@@ -13,7 +13,7 @@
                                 <path d="M256 16l-40 96-104-24 56 80-96 32 80 40-16 96 72-48 8 112 40-80 40 80 8-112 72 48-16-96 80-40-96-32 56-80-104 24z"/>
                             </svg>
                         </div>
-                        <span class="text-[10px] sm:text-[11px] tracking-widest font-bold uppercase text-slate-600 mt-1 ml-1 hidden sm:block">Economic Development Corporation</span>
+                        
                     </router-link>
                 </div>
 
